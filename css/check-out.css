@@ -1,0 +1,249 @@
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #f8f9fa;
+    --border-radius: 10px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.checkout-container {
+    max-width: 650px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    border-radius: var(--border-radius);
+}
+
+.checkout-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.checkout-header:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), #f5f7fa);
+}
+
+.section-title {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #495057;
+    display: flex;
+    align-items: center;
+}
+
+.section-title i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.payment-method {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.payment-option {
+    flex: 1;
+    min-width: 200px;
+    background: var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.payment-option:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.payment-option.active {
+    border-color: var(--primary-color);
+    background-color: rgba(78, 115, 223, 0.05);
+}
+
+.payment-option .payment-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.payment-option img {
+    max-height: 30px;
+    width: auto;
+}
+
+.form-control {
+    padding: 12px 15px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ddd;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
+}
+
+.card-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 25px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+}
+
+.btn-outline-secondary {
+    border-radius: var(--border-radius);
+    padding: 10px 25px;
+}
+
+.divider {
+    margin: 25px 0;
+    border-top: 1px dashed #ddd;
+}
+
+@media (max-width: 576px) {
+    .checkout-container {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .payment-option {
+        min-width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+}
+.checkout-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-header {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.payment-method {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.payment-option.active {
+    border-color: #0d6efd;
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+.payment-option label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 10px;
+    height: 30px;
+    align-items: center;
+}
+
+.payment-icons img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.divider {
+    height: 1px;
+    background: #eee;
+    margin: 25px 0;
+}
+
+.btn-group {
+    margin-top: 30px;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 5px;
+    font-size: 0.9rem;
+}
+
+.step-text {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.bg-step-active {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.bg-step-inactive {
+    background-color: #e9ecef;
+    color: #6c757d;
+}

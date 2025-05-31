@@ -1,0 +1,173 @@
+/* Custom styles */
+.navbar-brand img {
+    height: 40px;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.about-brand {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.about-brand h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.about-brand img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-description {
+    padding: 50px 0;
+}
+
+.brand-values {
+    padding: 50px 0;
+}
+
+.value-item {
+    margin-bottom: 30px;
+}
+
+.value-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.footer-title {
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #000;
+}
+
+.newsletter-input {
+    border-radius: 0;
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+}
+
+.payment-methods img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+    .about-brand {
+        height: 300px;
+    }
+
+    .about-brand h2 {
+        font-size: 2rem;
+    }
+
+    /* Reorder brand values section */
+    .brand-values .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .brand-values .col-md-6:first-child {
+        order: 2;
+        margin-top: 30px;
+    }
+
+    .brand-values .col-md-6:last-child {
+        order: 1;
+    }
+
+    /* Reorder footer columns */
+    .footer-section .row > div {
+        margin-bottom: 30px;
+    }
+
+    .footer-section .row > div:last-child {
+        order: -1;
+    }
+}
+.about-brand {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.about-brand img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.about-brand h2 {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+.brand-description {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+.brand-description h3 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #212529;
+}
+.brand-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #495057;
+}
+.brand-values {
+    padding: 80px 0;
+}
+.value-item {
+    margin-bottom: 40px;
+}
+.value-item .h4 {
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 15px;
+}
+.value-item p {
+    line-height: 1.7;
+    color: #495057;
+}

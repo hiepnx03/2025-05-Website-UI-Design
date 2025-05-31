@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css">
+  <title>Home - My Website</title>
+</head>
+<body>
+
+<div id="header-container"></div>
+
+
+<div class="d-none d-md-block">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../images/banner1.jpg" class="d-block w-100 carousel-img" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../images/banner2.webp" class="d-block w-100 carousel-img" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../images/banner3.jpg" class="d-block w-100 carousel-img" alt="...">
+      </div>
+    </div>
+    <!-- Các control buttons giữ nguyên -->
+  </div>
+</div>
+
+<style>
+  .carousel-img {
+    height: 800px; /* Chiều cao cố định bạn muốn */
+    object-fit: cover; /* Ảnh sẽ được crop để vừa khung */
+    /* Hoặc dùng object-fit: contain; nếu muốn hiển thị toàn bộ ảnh (có thể có khoảng trống) */
+    width: 100%;
+  }
+</style>
+
+
+<!-- Thêm phần giới thiệu trên sản phẩm mới -->
+<div class="container my-5 py-4 bg-light rounded">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h2 class="display-6 fw-bold">DENIM - BIỂU TƯỢNG CỦA PHONG CÁCH</h2>
+      <p class="lead">Từ năm 1873 đến nay, chất liệu denim đã trở thành biểu tượng thời trang không tuổi. Bộ sưu tập mới nhất của chúng tôi kết hợp công nghệ may mặc hiện đại với phong cách cổ điển, mang đến trải nghiệm đặc biệt cho người yêu thời trang.</p>
+      <a href="#" class="btn btn-outline-dark">Tìm hiểu lịch sử denim</a>
+    </div>
+    <div class="col-md-6">
+      <img src="../images/bannerheader.jpg" alt="Lịch sử chất liệu denim" class="img-fluid rounded">
+    </div>
+  </div>
+</div>
+
+<!-- b5-breadcrumb-divider -->
+<div class="container">
+
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Product</li>
+    </ol>
+  </nav>
+
+</div>
+
+
+<!-- b5-dropdown-button -->
+
+<div class="container d-flex justify-content-end">
+
+  <div class="dropdown">
+    <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+            aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Main Content Structure -->
+<div class="container mt-5">
+
+  <!-- 1. Sản phẩm mới ra mắt (Đặt đầu trang) -->
+  <div class="new-arrivals-section">
+    <!-- Nội dung sản phẩm mới như trước -->
+  </div>
+
+  <!-- 2. Sản phẩm bán chạy (Đặt ngay sau sản phẩm mới) -->
+  <div class="best-sellers-section mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div>
+        <h1 class="fw-bold">SẢN PHẨM BÁN CHẠY</h1>
+        <p class="text-muted">Những thiết kế được yêu thích nhất</p>
+      </div>
+      <a href="product.html" class="btn btn-outline-dark">Xem tất cả <i class="bi bi-arrow-right"></i></a>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <!-- Product 1 -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">Bán chạy</span>
+          <img src="../images/Quần%20Jeans%20Skinny.avif" class="card-img-top" alt="Quần jeans bán chạy 1">
+          <div class="card-body px-0">
+            <h5 class="card-title">Quần Jeans Skinny</h5>
+            <p class="card-text text-muted">Thiết kế ôm sát, chất liệu co giãn</p>
+            <p class="fw-bold">750,000₫</p>
+          </div>
+          <div class="card-footer bg-transparent border-0 px-0">
+            <button class="btn btn-dark w-100">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">Bán chạy</span>
+          <img src="../images/Quần%20Jean%20nữ%20rách%20đẹp.webp" class="card-img-top" alt="Quần jeans bán chạy 2">
+          <div class="card-body px-0">
+            <h5 class="card-title">Quần Jeans Rách</h5>
+            <p class="card-text text-muted">Phong cách cá tính, chất liệu bền</p>
+            <p class="fw-bold">980,000₫</p>
+          </div>
+          <div class="card-footer bg-transparent border-0 px-0">
+            <button class="btn btn-dark w-100">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">Bán chạy</span>
+          <img src="../images/Quần%20jeans%20nam%20ống%20đứng%20xanh%20navy%20phối%20chỉ%20vàng.webp" class="card-img-top" alt="Quần jeans bán chạy 3">
+          <div class="card-body px-0">
+            <h5 class="card-title">Quần Jeans Ống Đứng</h5>
+            <p class="card-text text-muted">Thiết kế thanh lịch, phù hợp công sở</p>
+            <p class="fw-bold">1,150,000₫</p>
+          </div>
+          <div class="card-footer bg-transparent border-0 px-0">
+            <button class="btn btn-dark w-100">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">Bán chạy</span>
+          <img src="../images/QUẦN%20BOOTCUT%20CÓ%20ĐƯỜNG%20GÂN%20NỔI.jpg" class="card-img-top" alt="Quần jeans bán chạy 4">
+          <div class="card-body px-0">
+            <h5 class="card-title">Quần Jeans Nữ Cạp Cao</h5>
+            <p class="card-text text-muted">Tôn dáng, chất liệu mềm mại</p>
+            <p class="fw-bold">890,000₫</p>
+          </div>
+          <div class="card-footer bg-transparent border-0 px-0">
+            <button class="btn btn-dark w-100">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Pagination (Cuối trang) -->
+  <div class="d-flex justify-content-center mt-5">
+    <!-- Phân trang như trước -->
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Main Content - New Arrivals -->
+<div class="container mt-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+      <h1 class="fw-bold">QUẦN JEANS MỚI NHẤT</h1>
+      <p class="text-muted">Khám phá bộ sưu tập jeans mới nhất của chúng tôi</p>
+    </div>
+    <a href="product.html" class="btn btn-outline-dark">Xem tất cả <i class="bi bi-arrow-right"></i></a>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- Product 1 -->
+    <div class="col">
+      <div class="card border-0 h-100">
+        <img src="../images/Quần%20Jean%20Nam%20Nâu%20Phai%20Rách%20Ống.webp" class="card-img-top" alt="Quần jeans slim fit">
+        <div class="card-body px-0">
+          <h5 class="card-title">Quần Jeans Slim Fit</h5>
+          <p class="card-text text-muted">Chất liệu denim co giãn, thiết kế ôm tôn dáng</p>
+          <p class="fw-bold">890,000₫</p>
+        </div>
+        <div class="card-footer bg-transparent border-0 px-0">
+          <button class="btn btn-dark w-100">Thêm vào giỏ</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="col">
+      <div class="card border-0 h-100">
+        <img src="../images/Quần%20Jean%20Nam%20Be%20Ống%20Suông%20Meet%20Every%20Challenge%20With%20Courage%20Form%20Straight.jpg" class="card-img-top" alt="Quần jeans rộng ống">
+        <div class="card-body px-0">
+          <h5 class="card-title">Quần Jeans Rộng Ống</h5>
+          <p class="card-text text-muted">Phong cách streetwear, chất liệu denim dày dặn</p>
+          <p class="fw-bold">950,000₫</p>
+        </div>
+        <div class="card-footer bg-transparent border-0 px-0">
+          <button class="btn btn-dark w-100">Thêm vào giỏ</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="col">
+      <div class="card border-0 h-100">
+        <img src="../images/quanquan-jean-nam-ong-suong-lightbule-form-baggy__4__2b77510021494f4eb04a4acbf247a237_master.jpg" class="card-img-top" alt="Quần jeans cạp cao">
+        <div class="card-body px-0">
+          <h5 class="card-title">Quần Jeans Cạp Cao</h5>
+          <p class="card-text text-muted">Thiết kế nữ tính, chất liệu mềm mại</p>
+          <p class="fw-bold">850,000₫</p>
+        </div>
+        <div class="card-footer bg-transparent border-0 px-0">
+          <button class="btn btn-dark w-100">Thêm vào giỏ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<br/>
+
+<div id="footer-placeholder"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/default-header-footer.js"></script>
+
+</body>
+</html>

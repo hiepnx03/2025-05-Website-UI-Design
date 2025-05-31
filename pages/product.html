@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../css/product.css" />
+  <title>Danh sách sản phẩm - Denim Fashion</title>
+</head>
+<body>
+
+<div id="header-container"></div>
+
+<!-- Breadcrumb -->
+<div class="container mt-3">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="../index.html">Trang chủ</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Danh sách sản phẩm</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- Main Content -->
+<div class="container mt-4">
+  <div class="row">
+    <!-- Filter Sidebar -->
+    <div class="col-md-3">
+      <div class="card mb-4">
+        <div class="card-header bg-dark text-white">
+          <h5 class="mb-0">BỘ LỌC SẢN PHẨM</h5>
+        </div>
+        <div class="card-body">
+          <!-- Price Filter -->
+          <div class="mb-4">
+            <h6 class="fw-bold">Mức giá</h6>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="price1">
+              <label class="form-check-label" for="price1">Dưới 500,000₫</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="price2">
+              <label class="form-check-label" for="price2">500,000₫ - 1,000,000₫</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="price3">
+              <label class="form-check-label" for="price3">Trên 1,000,000₫</label>
+            </div>
+          </div>
+
+          <!-- Size Filter -->
+          <div class="mb-4">
+            <h6 class="fw-bold">Kích cỡ</h6>
+            <div class="btn-group btn-group-sm" role="group">
+              <input type="checkbox" class="btn-check" id="size-s" autocomplete="off">
+              <label class="btn btn-outline-dark" for="size-s">S</label>
+
+              <input type="checkbox" class="btn-check" id="size-m" autocomplete="off">
+              <label class="btn btn-outline-dark" for="size-m">M</label>
+
+              <input type="checkbox" class="btn-check" id="size-l" autocomplete="off">
+              <label class="btn btn-outline-dark" for="size-l">L</label>
+
+              <input type="checkbox" class="btn-check" id="size-xl" autocomplete="off">
+              <label class="btn btn-outline-dark" for="size-xl">XL</label>
+            </div>
+          </div>
+
+          <!-- Color Filter -->
+          <div class="mb-4">
+            <h6 class="fw-bold">Màu sắc</h6>
+            <div class="d-flex flex-wrap gap-2">
+              <div class="color-option" data-color="blue" style="background-color: #0d6efd;"></div>
+              <div class="color-option" data-color="black" style="background-color: #212529;"></div>
+              <div class="color-option" data-color="white" style="background-color: #f8f9fa; border: 1px solid #dee2e6;"></div>
+              <div class="color-option" data-color="gray" style="background-color: #6c757d;"></div>
+              <div class="color-option" data-color="lightblue" style="background-color: #0dcaf0;"></div>
+            </div>
+          </div>
+
+          <!-- Style Filter -->
+          <div class="mb-4">
+            <h6 class="fw-bold">Kiểu dáng</h6>
+            <select class="form-select">
+              <option selected>Tất cả</option>
+              <option>Skinny</option>
+              <option>Straight</option>
+              <option>Bootcut</option>
+              <option>Ripped</option>
+              <option>Boyfriend</option>
+            </select>
+          </div>
+
+          <button class="btn btn-dark w-100">Áp dụng bộ lọc</button>
+        </div>
+      </div>
+
+      <!-- Banner quảng cáo -->
+      <div class="card mb-4 border-0 shadow-sm">
+        <img src="../images/khuyenmai.png" class="card-img-top" alt="Khuyến mãi đặc biệt">
+        <div class="card-body text-center">
+          <h5 class="card-title">GIẢM GIÁ 30%</h5>
+          <p class="card-text">Cho đơn hàng đầu tiên</p>
+          <a href="#" class="btn btn-outline-danger">Áp dụng ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Listing -->
+    <div class="col-md-9">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold mb-0">QUẦN JEANS</h2>
+        <div class="d-flex">
+          <div class="dropdown me-2">
+            <button class="btn btn-outline-dark dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              Sắp xếp theo
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+              <li><a class="dropdown-item" href="#">Mặc định</a></li>
+              <li><a class="dropdown-item" href="#">Giá: Thấp đến cao</a></li>
+              <li><a class="dropdown-item" href="#">Giá: Cao đến thấp</a></li>
+              <li><a class="dropdown-item" href="#">Bán chạy nhất</a></li>
+              <li><a class="dropdown-item" href="#">Mới nhất</a></li>
+            </ul>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-outline-dark active" id="gridView">
+              <i class="bi bi-grid-3x3-gap"></i>
+            </button>
+            <button type="button" class="btn btn-outline-dark" id="listView">
+              <i class="bi bi-list-ul"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Grid View -->
+      <div class="row row-cols-1 row-cols-md-3 g-4" id="productGridView">
+        <!-- Product 1 -->
+        <div class="col">
+          <div class="card h-100 product-card">
+            <div class="position-relative">
+              <img src="../images/Quần%20Jeans%20Skinny.avif" class="card-img-top" alt="Quần Jeans Skinny">
+              <div class="card-actions">
+                <button class="btn btn-dark btn-sm quick-view" data-bs-toggle="modal" data-bs-target="#productModal">
+                  <i class="bi bi-eye"></i>
+                </button>
+                <button class="btn btn-dark btn-sm add-to-wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <span class="badge bg-danger position-absolute top-0 start-0 m-2">Bán chạy</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Quần Jeans Skinny</h5>
+              <p class="card-text text-muted">Thiết kế ôm sát, chất liệu co giãn</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="fw-bold mb-0">750,000₫</p>
+                <span class="text-muted"><small><del>950,000₫</del></small></span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent">
+              <button class="btn btn-dark w-100 add-to-cart"
+                      data-id="1"
+                      data-name="Quần Jeans Skinny"
+                      data-price="750000"
+                      data-image="../images/Quần%20Jeans%20Skinny.avif">
+                Thêm vào giỏ
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col">
+          <div class="card h-100 product-card">
+            <div class="position-relative">
+              <img src="../images/Quần%20Jean%20nữ%20rách%20đẹp.webp" class="card-img-top" alt="Quần Jeans Rách">
+              <div class="card-actions">
+                <button class="btn btn-dark btn-sm quick-view" data-bs-toggle="modal" data-bs-target="#productModal">
+                  <i class="bi bi-eye"></i>
+                </button>
+                <button class="btn btn-dark btn-sm add-to-wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <span class="badge bg-success position-absolute top-0 start-0 m-2">Mới</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Quần Jeans Rách</h5>
+              <p class="card-text text-muted">Phong cách cá tính, chất liệu bền</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="fw-bold mb-0">980,000₫</p>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent">
+              <button class="btn btn-dark w-100 add-to-cart"
+                      data-id="1"
+                      data-name="Quần Jeans Rách"
+                      data-price="980000"
+                      data-image="../images/Quần%20Jean%20nữ%20rách%20đẹp.webp">
+                Thêm vào giỏ
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col">
+          <div class="card h-100 product-card">
+            <div class="position-relative">
+              <img src="../images/Quần%20jeans%20nam%20ống%20đứng%20xanh%20navy%20phối%20chỉ%20vàng.webp" class="card-img-top" alt="Quần Jeans Ống Đứng">
+              <div class="card-actions">
+                <button class="btn btn-dark btn-sm quick-view" data-bs-toggle="modal" data-bs-target="#productModal">
+                  <i class="bi bi-eye"></i>
+                </button>
+                <button class="btn btn-dark btn-sm add-to-wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Quần Jeans Ống Đứng</h5>
+              <p class="card-text text-muted">Thiết kế thanh lịch, phù hợp công sở</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="fw-bold mb-0">1,150,000₫</p>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent">
+              <button class="btn btn-dark w-100 add-to-cart"
+                      data-id="1"
+                      data-name="Quần Jeans Ống Đứng"
+                      data-price="1150000"
+                      data-image="../images/Quần%20jeans%20nam%20ống%20đứng%20xanh%20navy%20phối%20chỉ%20vàng.webp">
+                Thêm vào giỏ
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col">
+          <div class="card h-100 product-card">
+            <div class="position-relative">
+              <img src="../images/QUẦN%20BOOTCUT%20CÓ%20ĐƯỜNG%20GÂN%20NỔI.jpg" class="card-img-top" alt="Quần Jeans Bootcut">
+              <div class="card-actions">
+                <button class="btn btn-dark btn-sm quick-view" data-bs-toggle="modal" data-bs-target="#productModal">
+                  <i class="bi bi-eye"></i>
+                </button>
+                <button class="btn btn-dark btn-sm add-to-wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Quần Jeans Bootcut</h5>
+              <p class="card-text text-muted">Tôn dáng, chất liệu mềm mại</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="fw-bold mb-0">890,000₫</p>
+                <span class="text-muted"><small><del>1,200,000₫</del></small></span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent">
+              <button class="btn btn-dark w-100 add-to-cart">Thêm vào giỏ</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col">
+          <div class="card h-100 product-card">
+            <div class="position-relative">
+              <img src="../images/Quần%20Jean%20Nam%20Nâu%20Phai%20Rách%20Ống.webp" class="card-img-top" alt="Quần Jeans Nam">
+              <div class="card-actions">
+                <button class="btn btn-dark btn-sm quick-view" data-bs-toggle="modal" data-bs-target="#productModal">
+                  <i class="bi bi-eye"></i>
+                </button>
+                <button class="btn btn-dark btn-sm add-to-wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Quần Jeans Nam</h5>
+              <p class="card-text text-muted">Phong cách cổ điển, chất liệu cao cấp</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="fw-bold mb-0">1,250,000₫</p>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent">
+              <button class="btn btn-dark w-100 add-to-cart">Thêm vào giỏ</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col">
+          <div class="card h-100 product-card">
+            <div class="position-relative">
+              <img src="../images/Quần%20Jean%20Nam%20Be%20Ống%20Suông%20Meet%20Every%20Challenge%20With%20Courage%20Form%20Straight.jpg" class="card-img-top" alt="Quần Jeans Ống Suông">
+              <div class="card-actions">
+                <button class="btn btn-dark btn-sm quick-view" data-bs-toggle="modal" data-bs-target="#productModal">
+                  <i class="bi bi-eye"></i>
+                </button>
+                <button class="btn btn-dark btn-sm add-to-wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">-20%</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Quần Jeans Ống Suông</h5>
+              <p class="card-text text-muted">Thoải mái, phù hợp mọi hoạt động</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="fw-bold mb-0">850,000₫</p>
+                <span class="text-muted"><small><del>1,050,000₫</del></small></span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent">
+              <button class="btn btn-dark w-100 add-to-cart">Thêm vào giỏ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product List View (Hidden by default) -->
+      <div class="row d-none" id="productListView">
+        <!-- Product 1 List View -->
+        <div class="col-12 mb-4">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-3">
+                <img src="../images/Quần%20Jeans%20Skinny.avif" class="img-fluid rounded-start" alt="Quần Jeans Skinny">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title">Quần Jeans Skinny</h5>
+                  <p class="card-text">Thiết kế ôm sát, chất liệu co giãn với 98% cotton và 2% spandex, mang lại sự thoải mái tối đa khi mặc.</p>
+                  <div class="d-flex align-items-center mb-2">
+                    <div class="me-2">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-half text-warning"></i>
+                      <span class="text-muted ms-1">(128 đánh giá)</span>
+                    </div>
+                    <span class="badge bg-danger">Bán chạy</span>
+                  </div>
+                  <div>
+                    <span class="fw-bold text-danger">750,000₫</span>
+                    <span class="text-muted ms-2"><del>950,000₫</del></span>
+                    <span class="badge bg-success ms-2">Tiết kiệm 21%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 d-flex align-items-center justify-content-center">
+                <div class="d-grid gap-2 w-100 px-3">
+                  <button class="btn btn-dark">Thêm vào giỏ</button>
+                  <button class="btn btn-outline-dark">Mua ngay</button>
+                  <button class="btn btn-link text-dark"><i class="bi bi-heart"></i> Yêu thích</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 List View -->
+        <div class="col-12 mb-4">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-3">
+                <img src="../images/Quần%20Jean%20nữ%20rách%20đẹp.webp" class="img-fluid rounded-start" alt="Quần Jeans Rách">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title">Quần Jeans Rách</h5>
+                  <p class="card-text">Phong cách cá tính với thiết kế rách nghệ thuật, chất liệu denim dày dặn, bền đẹp theo thời gian.</p>
+                  <div class="d-flex align-items-center mb-2">
+                    <div class="me-2">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star text-warning"></i>
+                      <span class="text-muted ms-1">(95 đánh giá)</span>
+                    </div>
+                    <span class="badge bg-success">Mới</span>
+                  </div>
+                  <div>
+                    <span class="fw-bold">980,000₫</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 d-flex align-items-center justify-content-center">
+                <div class="d-grid gap-2 w-100 px-3">
+                  <button class="btn btn-dark">Thêm vào giỏ</button>
+                  <button class="btn btn-outline-dark">Mua ngay</button>
+                  <button class="btn btn-link text-dark"><i class="bi bi-heart"></i> Yêu thích</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <nav aria-label="Page navigation" class="mt-5">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Trước</a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Sau</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- Product Quick View Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productModalLabel">Xem nhanh sản phẩm</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="../images/Quần%20Jeans%20Skinny.avif" class="img-fluid" alt="Product Image">
+          </div>
+          <div class="col-md-6">
+            <h3>Quần Jeans Skinny</h3>
+            <div class="d-flex align-items-center mb-3">
+              <div class="me-2">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+              </div>
+              <span class="text-muted">(128 đánh giá)</span>
+            </div>
+            <div class="mb-3">
+              <span class="fw-bold fs-4 text-danger">750,000₫</span>
+              <span class="text-muted ms-2"><del>950,000₫</del></span>
+              <span class="badge bg-success ms-2">Tiết kiệm 21%</span>
+            </div>
+            <p class="mb-4">Thiết kế ôm sát, chất liệu co giãn với 98% cotton và 2% spandex, mang lại sự thoải mái tối đa khi mặc.</p>
+
+            <div class="mb-4">
+              <h6>Kích cỡ</h6>
+              <div class="btn-group btn-group-sm" role="group">
+                <input type="radio" class="btn-check" name="size" id="size-s-modal" autocomplete="off" checked>
+                <label class="btn btn-outline-dark" for="size-s-modal">S</label>
+
+                <input type="radio" class="btn-check" name="size" id="size-m-modal" autocomplete="off">
+                <label class="btn btn-outline-dark" for="size-m-modal">M</label>
+
+                <input type="radio" class="btn-check" name="size" id="size-l-modal" autocomplete="off">
+                <label class="btn btn-outline-dark" for="size-l-modal">L</label>
+
+                <input type="radio" class="btn-check" name="size" id="size-xl-modal" autocomplete="off">
+                <label class="btn btn-outline-dark" for="size-xl-modal">XL</label>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h6>Số lượng</h6>
+              <div class="input-group" style="width: 150px;">
+                <button class="btn btn-outline-dark" type="button">-</button>
+                <input type="text" class="form-control text-center" value="1">
+                <button class="btn btn-outline-dark" type="button">+</button>
+              </div>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button class="btn btn-dark">Thêm vào giỏ hàng</button>
+              <button class="btn btn-outline-dark">Mua ngay</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/default-header-footer.js"></script>
+<script src="../js/product.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.login-container h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.login-container .form-control {
+    border-radius: 0;
+}
+
+.login-container .btn-primary {
+    width: 100%;
+    border-radius: 0;
+}
+
+.login-container .text-end a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.login-container .text-end a:hover {
+    text-decoration: underline;
+}

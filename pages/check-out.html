@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán | Thông tin thanh toán</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/check-out.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<div id="header-container"></div>
+
+<div class="checkout-container">
+    <!-- Checkout Header -->
+    <h2 class="checkout-header">HOÀN TẤT THANH TOÁN</h2>
+
+    <!-- Progress Indicator -->
+    <div class="d-flex justify-content-between mb-4 text-center">
+        <div>
+            <div class="step-number bg-step-active">1</div>
+            <div class="step-text">Thông tin</div>
+        </div>
+        <div>
+            <div class="step-number bg-step-active">2</div>
+            <div class="step-text">Thanh toán</div>
+        </div>
+        <div>
+            <div class="step-number bg-step-inactive">3</div>
+            <div class="step-text">Xác nhận</div>
+        </div>
+    </div>
+
+    <!-- Payment Method Section -->
+    <div class="mb-4">
+        <h5 class="section-title"><i class="bi bi-credit-card"></i> PHƯƠNG THỨC THANH TOÁN</h5>
+        <div class="payment-method">
+            <div class="payment-option active">
+                <input class="form-check-input" type="radio" name="payment" id="creditCard" checked hidden>
+                <div class="payment-icons">
+                    <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-VNPAY-QR.png" alt="VNPay">
+                </div>
+                <label class="form-check-label" for="creditCard">
+                    Thẻ ngân hàng
+                </label>
+            </div>
+
+            <div class="payment-option">
+                <input class="form-check-input" type="radio" name="payment" id="momo" hidden>
+                <div class="payment-icons">
+                    <img src="../images/momo.webp" alt="MoMo">
+                </div>
+                <label class="form-check-label" for="momo">
+                    Ví MoMo
+                </label>
+            </div>
+
+            <div class="payment-option">
+                <input class="form-check-input" type="radio" name="payment" id="cod" hidden>
+                <div class="payment-icons">
+                    <i class="bi bi-truck" style="font-size: 1.5rem;"></i>
+                </div>
+                <label class="form-check-label" for="cod">
+                    COD
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Card Information Section -->
+    <div class="mb-4 mt-5" id="cardInfoSection">
+        <h5 class="section-title"><i class="bi bi-card-text"></i> THÔNG TIN THẺ</h5>
+
+        <div class="mb-3 position-relative">
+            <label for="cardholder" class="form-label">Tên chủ thẻ</label>
+            <input type="text" class="form-control" id="cardholder" placeholder="Nhập tên in trên thẻ">
+        </div>
+
+        <div class="mb-3 position-relative">
+            <label for="cardnumber" class="form-label">Số thẻ</label>
+            <input type="text" class="form-control" id="cardnumber" placeholder="1234 5678 9012 3456">
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3 position-relative">
+                <label for="expiry" class="form-label">Ngày hết hạn</label>
+                <input type="text" class="form-control" id="expiry" placeholder="MM/YY">
+            </div>
+            <div class="col-md-6 mb-3 position-relative">
+                <label for="cvv" class="form-label">Mã bảo mật</label>
+                <input type="password" class="form-control" id="cvv" placeholder="CVV">
+            </div>
+        </div>
+
+
+</div>
+
+    <!-- Momo Information Section (hidden by default) -->
+    <div class="mb-4 d-none" id="momoInfoSection">
+        <h5 class="section-title"><i class="bi bi-phone"></i> THÔNG TIN VÍ MOMO</h5>
+        <div class="alert alert-info">
+            Bạn sẽ được chuyển hướng đến ứng dụng MoMo để hoàn tất thanh toán
+        </div>
+    </div>
+
+    <!-- COD Information Section (hidden by default) -->
+    <div class="mb-4 d-none" id="codInfoSection">
+        <h5 class="section-title"><i class="bi bi-cash"></i> THANH TOÁN KHI NHẬN HÀNG</h5>
+        <div class="alert alert-info">
+            Bạn sẽ thanh toán khi nhận được hàng. Phí thu hộ: 0₫
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Action Buttons -->
+    <div class="d-flex justify-content-between btn-group">
+        <button class="btn btn-outline-secondary" onclick="window.location.href='checkout.html'">
+            <i class="bi bi-arrow-left"></i> Quay lại
+        </button>
+        <button class="btn btn-primary" id="continueBtn" onclick="window.location.href='review.html'">
+            Tiếp tục <i class="bi bi-arrow-right"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<div id="footer-placeholder"></div>
+
+<script src="../js/default-header-footer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>
